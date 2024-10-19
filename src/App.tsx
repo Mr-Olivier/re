@@ -1,26 +1,38 @@
-import ListGroup from "./components/ListGroup";
-
-import Alert from "./components/Alert";
+import { BsCalendarFill } from "react-icons/bs";
 
 function App() {
-  let items = ["New York", "San Francisco", "Tokyo", "London", "Paris"];
-
-  const handleSelectItem = (item: string) => {
-    console.log(item);
-  };
-
   return (
     <div>
-      <ListGroup
-        items={items}
-        heading="Cities"
-        onSelectItem={handleSelectItem}
-      />
+      <BsCalendarFill color="red" size={40} />
     </div>
   );
 }
 
 export default App;
+
+// import ListGroup from "./components/ListGroup";
+
+// import Alert from "./components/Alert";
+
+// function App() {
+//   let items = ["New York", "San Francisco", "Tokyo", "London", "Paris"];
+
+//   const handleSelectItem = (item: string) => {
+//     console.log(item);
+//   };
+
+//   return (
+//     <div>
+//       <ListGroup
+//         items={items}
+//         heading="Cities"
+//         onSelectItem={handleSelectItem}
+//       />
+//     </div>
+//   );
+// }
+
+// export default App;
 
 // function App() {
 //   return (
