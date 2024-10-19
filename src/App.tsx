@@ -1,14 +1,25 @@
-import { BsCalendarFill } from "react-icons/bs";
-
+import Button from "./components/Button/Button";
 function App() {
   return (
     <div>
-      <BsCalendarFill color="red" size={40} />
+      <Button onClick={() => console.log("Clicked")}>My Button</Button>
     </div>
   );
 }
 
 export default App;
+
+// import { BsCalendarFill } from "react-icons/bs";
+
+// function App() {
+//   return (
+//     <div>
+//       <BsCalendarFill color="red" size={40} />
+//     </div>
+//   );
+// }
+
+// export default App;
 
 // import ListGroup from "./components/ListGroup";
 
