@@ -1,30 +1,51 @@
-/////////////////////////////////
-// Updating arrays
+/////////////////////////////////////////////
+// Updating Array of objects
 
 import React, { useState } from "react";
 
 function App() {
-  const [tags, setTags] = useState(["happy", "cheerful"]);
+  const [bugs, setBugs] = useState([
+    { id: 1, title: "Bug 1", fixed: false },
+    { id: 2, title: "Bug 2", fixed: false },
+  ]);
 
   const handleClick = () => {
-    // Add
-    setTags([...tags, "exciting"]);
-
-    // Remove
-    setTags(tags.filter((tag) => tag !== "happy"));
-
-    // Update
-    setTags(tags.map((tag) => (tag === "happy" ? "happiness" : tag)));
+    setBugs(bugs.map((bug) => (bug.id === 1 ? { ...bug, fixed: true } : bug)));
   };
 
-  return (
-    <div>
-      <button onClick={handleClick}>Click Me</button>
-    </div>
-  );
+  return <div></div>;
 }
 
 export default App;
+
+/////////////////////////////////
+// Updating arrays
+
+// import React, { useState } from "react";
+
+// function App() {
+//   const [tags, setTags] = useState(["happy", "cheerful"]);
+
+//   const handleClick = () => {
+//     // Add
+//     setTags([...tags, "exciting"]);
+
+//     // Remove
+//     setTags(tags.filter((tag) => tag !== "happy"));
+
+//     // Update
+//     setTags(tags.map((tag) => (tag === "happy" ? "happiness" : tag)));
+//   };
+
+//   return (
+//     <div>
+//       <button onClick={handleClick}>Click Me</button>
+//     </div>
+//   );
+// }
+
+// export default App;
+
 ///////////////////
 // Updating nested objects
 // import React, { useState } from "react";
