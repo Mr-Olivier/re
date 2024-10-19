@@ -1,13 +1,21 @@
-import Button from "./components/Button/Button";
+import Like from "./components/Like";
+import Button from "./components/Like";
 function App() {
-  return (
-    <div>
-      <Button onClick={() => console.log("Clicked")}>My Button</Button>
-    </div>
-  );
+  return <Like onClick={() => console.log("clicked")} />;
 }
 
 export default App;
+
+// import Button from "./components/Button/Button";
+// function App() {
+//   return (
+//     <div>
+//       <Button onClick={() => console.log("Clicked")}>My Button</Button>
+//     </div>
+//   );
+// }
+
+// export default App;
 
 // import { BsCalendarFill } from "react-icons/bs";
 
