@@ -1,10 +1,31 @@
-import Like from "./components/Like";
-import Button from "./components/Like";
+import React from "react";
+import { useState } from "react";
+
 function App() {
-  return <Like onClick={() => console.log("clicked")} />;
+  const [person, setPerson] = useState({
+    firstName: "",
+    lastName: "",
+    contact: {
+      address: {
+        street: "",
+      },
+    },
+  });
+
+  const [isLoading, setLoading] = useState(false);
+
+  return <div></div>;
 }
 
 export default App;
+
+// import Like from "./components/Like";
+// import Button from "./components/Like";
+// function App() {
+//   return <Like onClick={() => console.log("clicked")} />;
+// }
+
+// export default App;
 
 // import Button from "./components/Button/Button";
 // function App() {
