@@ -1,21 +1,103 @@
-/////////////////////////////////////////////
-// Sharing State between components
+//////////////////////////////////////////////
+// Exercise - Updating State
+
+// Exercise 1
+
+// import React, { useState } from "react";
+
+// function App() {
+//   const [game, setGame] = useState({
+//     id: 1,
+//     player: {
+//       name: "John",
+//     },
+//   });
+
+//   const handleClick = () => {
+//     setGame({ ...game, player: { ...game.player, name: "Bob" } });
+//   };
+
+//   return (
+//     <div>
+//       <button onClick={handleClick}>Click Me</button>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+// // Exercise 2
+
+// import React, { useState } from "react";
+
+// function App() {
+//   const [pizza, setPizza] = useState({
+//     name: "Spicy Pepperoni",
+//     toppings: ["Mushroom"],
+//   });
+
+//   const handleClick = () => {
+//     setPizza({ ...pizza, toppings: [...pizza.toppings, "Cheese"] });
+//   };
+
+//   return (
+//     <div>
+//       <button onClick={handleClick}>Click Me</button>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+// Exercise 3
 
 import React, { useState } from "react";
-import NavBar from "./components/NavBar";
-import Cart from "./components/Cart";
 
 function App() {
-  const [cartItems, setCartItems] = useState(["Product1", "Product2"]);
+  const [cart, setCart] = useState({
+    discount: 0.1,
+    items: [
+      { id: 1, title: "Product 1", quantity: 1 },
+      { id: 2, title: "Product 2", quantity: 1 },
+    ],
+  });
+
+  const handleClick = () => {
+    setCart({
+      ...cart,
+      items: cart.items.map((item) =>
+        item.id === 1 ? { ...item, quantity: item.quantity + 1 } : item
+      ),
+    });
+  };
+
   return (
     <div>
-      <NavBar cartItemsCount={cartItems.length} />
-      <Cart cartItems={cartItems} onClear={() => setCartItems([])} />
+      <button onClick={handleClick}>Click Me</button>
     </div>
   );
 }
 
 export default App;
+
+/////////////////////////////////////////////
+// Sharing State between components
+
+// import React, { useState } from "react";
+// import NavBar from "./components/NavBar";
+// import Cart from "./components/Cart";
+
+// function App() {
+//   const [cartItems, setCartItems] = useState(["Product1", "Product2"]);
+//   return (
+//     <div>
+//       <NavBar cartItemsCount={cartItems.length} />
+//       <Cart cartItems={cartItems} onClear={() => setCartItems([])} />
+//     </div>
+//   );
+// }
+
+// export default App;
 
 /////////////////////////////////////////////
 // Simplifying Update Logic with Immer
