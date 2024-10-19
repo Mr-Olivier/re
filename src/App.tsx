@@ -1,17 +1,39 @@
-import React from "react";
-import Message from "./Message";
+import { useState } from "react";
 
 function App() {
+  const [drink, setDrink] = useState({
+    title: "Americano",
+    price: 5,
+  });
+
+  const handleClick = () => {
+    setDrink({ ...drink, price: 6 });
+  };
+
   return (
     <div>
-      <Message />
-      {/* <Message />
-      <Message /> */}
+      {drink.price}
+      <button onClick={handleClick}>Click Me</button>
     </div>
   );
 }
 
 export default App;
+
+// ort React from "react";
+// import Message from "./Message";
+
+// function App() {
+//   return (
+//     <div>
+//       <Message />
+//       {/* <Message />
+//       <Message /> */}
+//     </div>
+//   );
+// }
+
+// export default App;
 
 // import React from "react";
 // import { useState } from "react";
