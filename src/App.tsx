@@ -1,25 +1,57 @@
+/////////////////////////////////
+// Updating arrays
+
 import React, { useState } from "react";
 
 function App() {
-  const [customer, setCustomer] = useState({
-    name: "John",
-    address: {
-      city: "San Francisco",
-      zipCode: 94111,
-    },
-  });
+  const [tags, setTags] = useState(["happy", "cheerful"]);
 
   const handleClick = () => {
-    setCustomer({
-      ...customer,
-      address: { ...customer.address, zipCode: 94112 },
-    });
+    // Add
+    setTags([...tags, "exciting"]);
+
+    // Remove
+    setTags(tags.filter((tag) => tag !== "happy"));
+
+    // Update
+    setTags(tags.map((tag) => (tag === "happy" ? "happiness" : tag)));
   };
 
-  return <div></div>;
+  return (
+    <div>
+      <button onClick={handleClick}>Click Me</button>
+    </div>
+  );
 }
 
 export default App;
+///////////////////
+// Updating nested objects
+// import React, { useState } from "react";
+
+// function App() {
+//   const [customer, setCustomer] = useState({
+//     name: "John",
+//     address: {
+//       city: "San Francisco",
+//       zipCode: 94111,
+//     },
+//   });
+
+//   const handleClick = () => {
+//     setCustomer({
+//       ...customer,
+//       address: { ...customer.address, zipCode: 94112 },
+//     });
+//   };
+
+//   return <div></div>;
+// }
+
+// export default App;
+
+///////////////////////////////////////////
+// updating Objects
 
 // import { useState } from "react";
 
@@ -43,7 +75,9 @@ export default App;
 
 // export default App;
 
-// ort React from "react";
+///////////////////////////////
+// understanding the strict mode
+// import React from "react";
 // import Message from "./Message";
 
 // function App() {
@@ -57,6 +91,9 @@ export default App;
 // }
 
 // export default App;
+
+///////////////////////////////////////////
+// Keeping component pure
 
 // import React from "react";
 // import { useState } from "react";
