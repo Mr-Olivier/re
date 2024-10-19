@@ -1,26 +1,26 @@
-// import ListGroup from "./components/ListGroup";
+import ListGroup from "./components/ListGroup";
 
-// import Alert from "./components/Alert";
+import Alert from "./components/Alert";
 
-// function App() {
-//   let items = ["New York", "San Francisco", "Tokyo", "London", "Paris"];
+function App() {
+  let items = ["New York", "San Francisco", "Tokyo", "London", "Paris"];
 
-//   const handleSelectItem = (item: string) => {
-//     console.log(item);
-//   };
+  const handleSelectItem = (item: string) => {
+    console.log(item);
+  };
 
-//   return (
-//     <div>
-//       <ListGroup
-//         items={items}
-//         heading="Cities"
-//         onSelectItem={handleSelectItem}
-//       />
-//     </div>
-//   );
-// }
+  return (
+    <div>
+      <ListGroup
+        items={items}
+        heading="Cities"
+        onSelectItem={handleSelectItem}
+      />
+    </div>
+  );
+}
 
-// export default App;
+export default App;
 
 // function App() {
 //   return (
@@ -45,20 +45,20 @@
 
 // export default App;
 
-import { useState } from "react";
-import Alert from "./components/Alert";
-import Button from "./components/Button";
-function App() {
-  const [alertVisible, setAlertVisibility] = useState(false);
+// import { useState } from "react";
+// import Alert from "./components/Alert";
+// import Button from "./components/Button";
+// function App() {
+//   const [alertVisible, setAlertVisibility] = useState(false);
 
-  return (
-    <div>
-      {alertVisible && (
-        <Alert onClose={() => setAlertVisibility(false)}>My alert</Alert>
-      )}
-      <Button onClick={() => setAlertVisibility(true)}>My Button</Button>
-    </div>
-  );
-}
+//   return (
+//     <div>
+//       {alertVisible && (
+//         <Alert onClose={() => setAlertVisibility(false)}>My alert</Alert>
+//       )}
+//       <Button onClick={() => setAlertVisibility(true)}>My Button</Button>
+//     </div>
+//   );
+// }
 
-export default App;
+// export default App;
