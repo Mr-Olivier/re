@@ -1,23 +1,38 @@
 import React from "react";
-import { useState } from "react";
+import Message from "./Message";
 
 function App() {
-  const [person, setPerson] = useState({
-    firstName: "",
-    lastName: "",
-    contact: {
-      address: {
-        street: "",
-      },
-    },
-  });
-
-  const [isLoading, setLoading] = useState(false);
-
-  return <div></div>;
+  return (
+    <div>
+      <Message />
+      <Message />
+      <Message />
+    </div>
+  );
 }
 
 export default App;
+
+// import React from "react";
+// import { useState } from "react";
+
+// function App() {
+//   const [person, setPerson] = useState({
+//     firstName: "",
+//     lastName: "",
+//     contact: {
+//       address: {
+//         street: "",
+//       },
+//     },
+//   });
+
+//   const [isLoading, setLoading] = useState(false);
+
+//   return <div></div>;
+// }
+
+// export default App;
 
 // import Like from "./components/Like";
 // import Button from "./components/Like";
