@@ -1,14 +1,16 @@
 ////////////////////////////////////////////////////
-// Form Building
+// Handling Form Submission
 
-// div.mb.3>label.form-label+input.form-control
-//       div.mb-3>label.form-label+input[type=number].form-control
-// button.btn.btn-primary
-import React from "react";
+import React, { FormEvent } from "react";
 
 const Form = () => {
+  const handleSubmit = (event: FormEvent) => {
+    event.preventDefault();
+    console.log("Submitted");
+  };
+
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <div className="mb-3">
         <label htmlFor="name" className="form-label">
           Name
@@ -29,6 +31,38 @@ const Form = () => {
 };
 
 export default Form;
+
+////////////////////////////////////////////////////
+// Form Building
+
+// // div.mb.3>label.form-label+input.form-control
+// //       div.mb-3>label.form-label+input[type=number].form-control
+// // button.btn.btn-primary
+// import React from "react";
+
+// const Form = () => {
+//   return (
+//     <form>
+//       <div className="mb-3">
+//         <label htmlFor="name" className="form-label">
+//           Name
+//         </label>
+//         <input id="name" type="text" className="form-control" />
+//       </div>
+//       <div className="mb-3">
+//         <label htmlFor="age" className="form-label">
+//           Age
+//         </label>
+//         <input id="age" type="number" className="form-control" />
+//       </div>
+//       <button className="btn btn-primary" type="submit">
+//         Submit
+//       </button>
+//     </form>
+//   );
+// };
+
+// export default Form;
 
 //////////////////////////////////////////////////////
 // // The best Exercise
