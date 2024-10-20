@@ -1,3 +1,30 @@
+///////////////////////////////////////////////
+// Exercise - Building Expandable Text Component
+import React from "react";
+import ExpandableText from "./components/ExpandableText";
+
+function App() {
+  return (
+    <div>
+      <ExpandableText>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel beatae
+        similique laborum dolor iste porro. Tempore provident autem maxime
+        reiciendis voluptate earum repudiandae consectetur recusandae ea fuga
+        unde, qui totam deserunt, sed et quisquam amet distinctio fugiat.
+        Aliquid velit quod et qui incidunt harum sequi minus, saepe quam,
+        placeat sunt expedita soluta veniam voluptatem deleniti accusamus?
+        Tempore deserunt dolor fugit enim exercitationem sunt excepturi a
+        architecto ipsam cum neque totam perspiciatis omnis, corporis iusto
+        vitae provident illo deleniti rem cumque quisquam, sed praesentium! At
+        pariatur nobis, quibusdam libero vitae voluptatem illum amet reiciendis,
+        vero nemo numquam dicta animi! Ipsam, quidem?
+      </ExpandableText>
+    </div>
+  );
+}
+
+export default App;
+
 //////////////////////////////////////////////
 // Exercise - Updating State
 
@@ -49,36 +76,36 @@
 
 // export default App;
 
-// Exercise 3
+// // Exercise 3
 
-import React, { useState } from "react";
+// import React, { useState } from "react";
 
-function App() {
-  const [cart, setCart] = useState({
-    discount: 0.1,
-    items: [
-      { id: 1, title: "Product 1", quantity: 1 },
-      { id: 2, title: "Product 2", quantity: 1 },
-    ],
-  });
+// function App() {
+//   const [cart, setCart] = useState({
+//     discount: 0.1,
+//     items: [
+//       { id: 1, title: "Product 1", quantity: 1 },
+//       { id: 2, title: "Product 2", quantity: 1 },
+//     ],
+//   });
 
-  const handleClick = () => {
-    setCart({
-      ...cart,
-      items: cart.items.map((item) =>
-        item.id === 1 ? { ...item, quantity: item.quantity + 1 } : item
-      ),
-    });
-  };
+//   const handleClick = () => {
+//     setCart({
+//       ...cart,
+//       items: cart.items.map((item) =>
+//         item.id === 1 ? { ...item, quantity: item.quantity + 1 } : item
+//       ),
+//     });
+//   };
 
-  return (
-    <div>
-      <button onClick={handleClick}>Click Me</button>
-    </div>
-  );
-}
+//   return (
+//     <div>
+//       <button onClick={handleClick}>Click Me</button>
+//     </div>
+//   );
+// }
 
-export default App;
+// export default App;
 
 /////////////////////////////////////////////
 // Sharing State between components
