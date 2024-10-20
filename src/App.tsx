@@ -1,29 +1,44 @@
 ///////////////////////////////////////////////
-// Exercise - Building Expandable Text Component
-import React from "react";
-import ExpandableText from "./components/ExpandableText";
+// Building a Form
+
+import Form from "./components/Form";
 
 function App() {
   return (
     <div>
-      <ExpandableText>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel beatae
-        similique laborum dolor iste porro. Tempore provident autem maxime
-        reiciendis voluptate earum repudiandae consectetur recusandae ea fuga
-        unde, qui totam deserunt, sed et quisquam amet distinctio fugiat.
-        Aliquid velit quod et qui incidunt harum sequi minus, saepe quam,
-        placeat sunt expedita soluta veniam voluptatem deleniti accusamus?
-        Tempore deserunt dolor fugit enim exercitationem sunt excepturi a
-        architecto ipsam cum neque totam perspiciatis omnis, corporis iusto
-        vitae provident illo deleniti rem cumque quisquam, sed praesentium! At
-        pariatur nobis, quibusdam libero vitae voluptatem illum amet reiciendis,
-        vero nemo numquam dicta animi! Ipsam, quidem?
-      </ExpandableText>
+      <Form />
     </div>
   );
 }
 
 export default App;
+
+///////////////////////////////////////////////
+// Exercise - Building Expandable Text Component
+// import React from "react";
+// import ExpandableText from "./components/ExpandableText";
+
+// function App() {
+//   return (
+//     <div>
+//       <ExpandableText>
+//         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel beatae
+//         similique laborum dolor iste porro. Tempore provident autem maxime
+//         reiciendis voluptate earum repudiandae consectetur recusandae ea fuga
+//         unde, qui totam deserunt, sed et quisquam amet distinctio fugiat.
+//         Aliquid velit quod et qui incidunt harum sequi minus, saepe quam,
+//         placeat sunt expedita soluta veniam voluptatem deleniti accusamus?
+//         Tempore deserunt dolor fugit enim exercitationem sunt excepturi a
+//         architecto ipsam cum neque totam perspiciatis omnis, corporis iusto
+//         vitae provident illo deleniti rem cumque quisquam, sed praesentium! At
+//         pariatur nobis, quibusdam libero vitae voluptatem illum amet reiciendis,
+//         vero nemo numquam dicta animi! Ipsam, quidem?
+//       </ExpandableText>
+//     </div>
+//   );
+// }
+
+// export default App;
 
 //////////////////////////////////////////////
 // Exercise - Updating State
