@@ -1,3 +1,6 @@
+///////////////////////////////////////////////////////
+// Building ExpenseList
+
 import React from "react";
 
 interface Expense {
